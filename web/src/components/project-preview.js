@@ -7,7 +7,8 @@ import BlockText from './block-text'
 import styles from './project-preview.module.css'
 import { responsiveTitle3 } from './typography.module.css'
 
-function ProjectPreview (props) {
+function ProjectPreview(props) {
+  console.log('ProjectPreview', { props })
   return (
     <Link className={styles.root} to={`/project/${props.slug.current}`}>
       <div className={styles.leadMediaThumb}>
