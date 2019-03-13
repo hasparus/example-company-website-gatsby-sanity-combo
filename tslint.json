@@ -1,0 +1,4 @@
+{
+  "extends": ["@hasparus/tslint-config"],
+  "rules": {}
+}
