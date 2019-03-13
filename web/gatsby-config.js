@@ -6,6 +6,8 @@ require('dotenv').config()
 
 module.exports = {
   plugins: [
+    'gatsby-plugin-typescript', // transpiles
+    'gatsby-plugin-typescript-checker', // typechecks
     'gatsby-plugin-postcss',
     'gatsby-plugin-react-helmet',
     {
