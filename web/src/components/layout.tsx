@@ -1,12 +1,37 @@
-import React from 'react'
-import Header from './header'
+import React from 'react';
 
-import '../styles/layout.css'
-import styles from './layout.module.css'
+import '../styles/layout.css';
 
-const Layout = ({ children, companyInfo, onHideNav, onShowNav, showNav, siteTitle }) => (
+import Header, { HeaderProps } from './header';
+import styles from './layout.module.css';
+
+type CompanyInfo = {
+  name: string;
+  address1: string;
+  address2?: string;
+  zipCode: string;
+  city: string;
+  country?: string;
+};
+type LayoutProps = HeaderProps & {
+  companyInfo: CompanyInfo;
+};
+
+const Layout: React.FC<LayoutProps> = ({
+  children,
+  companyInfo,
+  onHideNav,
+  onShowNav,
+  showNav,
+  siteTitle,
+}) => (
   <>
-    <Header siteTitle={siteTitle} onHideNav={onHideNav} onShowNav={onShowNav} showNav={showNav} />
+    <Header
+      siteTitle={siteTitle}
+      onHideNav={onHideNav}
+      onShowNav={onShowNav}
+      showNav={showNav}
+    />
     <div className={styles.content}>{children}</div>
     <footer className={styles.footer}>
       <div className={styles.footerWrapper}>
@@ -30,13 +55,14 @@ const Layout = ({ children, companyInfo, onHideNav, onShowNav, showNav, siteTitl
         </div>
 
         <div className={styles.siteInfo}>
-          © {new Date().getFullYear()}, Built with <a href='https://www.sanity.io'>Sanity</a> &amp;
+          © {new Date().getFullYear()}, Built with{' '}
+          <a href="https://www.sanity.io">Sanity</a> &amp;
           {` `}
-          <a href='https://www.gatsbyjs.org'>Gatsby</a>
+          <a href="https://www.gatsbyjs.org">Gatsby</a>
         </div>
       </div>
     </footer>
   </>
-)
+);
 
-export default Layout
+export default Layout;

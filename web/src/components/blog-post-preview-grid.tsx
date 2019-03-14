@@ -1,10 +1,16 @@
-import { Link } from 'gatsby'
-import React from 'react'
-import BlogPostPreview from './blog-post-preview'
+import { Link } from 'gatsby';
+import React from 'react';
 
-import styles from './blog-post-preview-grid.module.css'
+import BlogPostPreview, { BlogPostPreviewProps } from './blog-post-preview';
+import styles from './blog-post-preview-grid.module.css';
 
-function BlogPostPreviewGrid (props) {
+type BlogPostPreviewGridProps = {
+  title: string;
+  browseMoreHref?: string;
+  nodes: BlogPostPreviewProps[];
+};
+
+const BlogPostPreviewGrid: React.FC<BlogPostPreviewGridProps> = props => {
   return (
     <div className={styles.root}>
       {props.title && (
@@ -30,13 +36,13 @@ function BlogPostPreviewGrid (props) {
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
 BlogPostPreviewGrid.defaultProps = {
   title: '',
   nodes: [],
-  browseMoreHref: ''
-}
+  browseMoreHref: '',
+};
 
-export default BlogPostPreviewGrid
+export default BlogPostPreviewGrid;

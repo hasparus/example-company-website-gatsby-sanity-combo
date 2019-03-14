@@ -1,15 +1,23 @@
-import { format, distanceInWords, differenceInDays } from 'date-fns'
-import React from 'react'
-import { buildImageObj } from '../lib/helpers'
-import { imageUrlFor } from '../lib/image-url'
-import BlockContent from './block-content'
-import Container from './container'
-import RoleList from './role-list'
+import { differenceInDays, distanceInWords, format } from 'date-fns';
+import React from 'react';
 
-import styles from './blog-post.module.css'
+import { buildImageObj } from '../lib/helpers';
+import { imageUrlFor } from '../lib/image-url';
 
-function BlogPost (props) {
-  const { _rawBody, authors, categories, title, mainImage, publishedAt } = props
+import BlockContent from './block-content';
+import styles from './blog-post.module.css';
+import Container from './container';
+import RoleList from './role-list';
+
+function BlogPost(props) {
+  const {
+    _rawBody,
+    authors,
+    categories,
+    title,
+    mainImage,
+    publishedAt,
+  } = props;
   return (
     <article className={styles.root}>
       {mainImage && mainImage.asset && (
@@ -38,7 +46,7 @@ function BlogPost (props) {
                   : format(new Date(publishedAt), 'MMMM Do YYYY')}
               </div>
             )}
-            {authors && <RoleList items={authors} title='Authors' />}
+            {authors && <RoleList items={authors} title="Authors" />}
             {categories && (
               <div className={styles.categories}>
                 <h3 className={styles.categoriesHeadline}>Categories</h3>
@@ -53,7 +61,7 @@ function BlogPost (props) {
         </div>
       </Container>
     </article>
-  )
+  );
 }
 
-export default BlogPost
+export default BlogPost;
