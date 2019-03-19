@@ -10,13 +10,13 @@
     "init": "cd studio && sanity init && lerna run graphql-deploy",
     "format": "lerna run format",
     "graphql-deploy": "lerna run graphql-deploy",
-    "tslint": "tslint --project web/tsconfig.json",
     "now-deploy": "now && now alias",
     "postinstall": "lerna bootstrap",
     "sanity-deploy": "lerna run sanity-deploy",
     "start": "lerna run empty-cache && lerna run start --parallel",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "lerna run lint"
+    "tslint": "tslint --project web/tsconfig.json",
+    "lint": "yarn run tslint && lerna run lint"
   },
   "devDependencies": {
     "@hasparus/tslint-config": "https://github.com/hasparus/tslint-config-hasparus",
@@ -24,5 +24,8 @@
     "rimraf": "^2.6.3",
     "tslint": "^5.14.0",
     "typescript": "^3.3.3333"
+  },
+  "workspaces": {
+    "packages": ["web", "studio"]
   }
 }

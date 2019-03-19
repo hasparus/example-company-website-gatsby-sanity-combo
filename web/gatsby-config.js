@@ -1,14 +1,15 @@
 const {
-  api: { projectId, dataset }
-} = require('../studio/sanity.json')
+  api: { projectId, dataset },
+} = require('../studio/sanity.json');
 
-require('dotenv').config()
+require('dotenv').config();
 
 module.exports = {
   plugins: [
     'gatsby-plugin-typescript', // transpiles
     'gatsby-plugin-typescript-checker', // typechecks
     'gatsby-plugin-postcss',
+    'gatsby-plugin-typescript-css-modules', // generates typings for css files
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-sanity',
@@ -19,8 +20,8 @@ module.exports = {
         // and add a token with read permissions
         token: process.env.SANITY_TOKEN,
         watchMode: true,
-        overlayDrafts: true
-      }
-    }
-  ]
-}
+        overlayDrafts: true,
+      },
+    },
+  ],
+};
