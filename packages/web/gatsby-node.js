@@ -1,5 +1,5 @@
 const { format } = require('date-fns');
-
+const { TypedCssModulesPlugin } = require('typed-css-modules-webpack-plugin');
 /**
  * Implement Gatsby's Node APIs in this file.
  *
@@ -86,4 +86,18 @@ async function createProjectPages(graphql, actions, reporter) {
 exports.createPages = async ({ graphql, actions, reporter }) => {
   await createBlogPostPages(graphql, actions, reporter);
   await createProjectPages(graphql, actions, reporter);
+};
+
+exports.onCreateWebpackConfig = ({ stage: _, actions }) => {
+  actions.setWebpackConfig({
+    plugins: [
+      new TypedCssModulesPlugin({
+        globPattern: 'src/**/*.module.css',
+        postCssPlugins: defaultPlugins => [
+          ...require('./postcss.config')().plugins,
+          ...defaultPlugins,
+        ],
+      }),
+    ],
+  });
 };

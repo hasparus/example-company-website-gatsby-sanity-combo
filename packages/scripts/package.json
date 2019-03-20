@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "version": "0.0.0",
+  "name": "scripts",
+  "dependencies": {
+    "executive": "^1.6.3",
+    "fp-ts": "^1.15.0"
+  },
+  "scripts": {
+    "killport": "ts-node killport.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^11.11.3"
+  }
+}

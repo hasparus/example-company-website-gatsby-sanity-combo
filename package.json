@@ -26,6 +26,8 @@
     "typescript": "^3.3.3333"
   },
   "workspaces": {
-    "packages": ["web", "studio"]
+    "packages": [
+      "packages/*"
+    ]
   }
 }

@@ -8,7 +8,7 @@ import BlockText from './block-text';
 import styles from './blog-post-preview.module.css';
 import { responsiveTitle3 } from './typography.module.css';
 
-type BlogPostPreviewProps = {
+export type BlogPostPreviewProps = {
   id: string;
   slug: { current: string };
   publishedAt: string | Date | number;

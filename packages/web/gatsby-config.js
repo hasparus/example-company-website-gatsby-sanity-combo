@@ -9,7 +9,6 @@ module.exports = {
     'gatsby-plugin-typescript', // transpiles
     'gatsby-plugin-typescript-checker', // typechecks
     'gatsby-plugin-postcss',
-    'gatsby-plugin-typescript-css-modules', // generates typings for css files
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-sanity',
