@@ -93,10 +93,7 @@ exports.onCreateWebpackConfig = ({ stage: _, actions }) => {
     plugins: [
       new TypedCssModulesPlugin({
         globPattern: 'src/**/*.css',
-        postCssPlugins: defaultPlugins => [
-          ...require('./postcss.config')().plugins,
-          ...defaultPlugins,
-        ],
+        postCssPlugins: defaultPlugins => defaultPlugins,
       }),
     ],
   });

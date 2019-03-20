@@ -6,3 +6,7 @@
 
 # lerna files
 /lerna-debug.log
+
+
+# CSS Typings -- they're generated so we can ignore them
+**/*.css.d.ts
