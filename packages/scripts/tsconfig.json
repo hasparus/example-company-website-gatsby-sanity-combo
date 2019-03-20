@@ -3,6 +3,7 @@
     "strict": true,
     "lib": ["es2017"],
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "jsx": "react"
   }
 }

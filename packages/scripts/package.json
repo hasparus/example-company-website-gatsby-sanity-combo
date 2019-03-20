@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "name": "scripts",
   "dependencies": {
+    "chalk": "^2.4.2",
     "executive": "^1.6.3",
     "fp-ts": "^1.15.0"
   },

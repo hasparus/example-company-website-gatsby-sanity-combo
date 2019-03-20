@@ -1,12 +1,15 @@
+import chalk from 'chalk';
 import exec from 'executive';
 import { head, last } from 'fp-ts/lib/Array';
+
+const red = (s: unknown) => chalk.red(String(s));
 
 const words = (s: string) => s.split(' ').filter(Boolean);
 
 const lines = (s: string) => s.split('\n');
 
-const panic = (msg: unknown) => {
-  console.error('Killport failed', msg);
+const panic = (...msgs: unknown[]) => {
+  console.error(red('Killport failed ⚡\n'), ...msgs);
   process.exit(1);
 };
 
@@ -30,14 +33,14 @@ async function main() {
     `);
 
     if (res.status !== 0) {
-      panic(res);
+      panic(`Can't find process on port ${portNumber}\n`, res);
     }
 
     head(lines(res.stdout))
       .map(words)
       .chain(last)
-      .map(processId => {
-        const taskKillRes = exec(` 
+      .map(async processId => {
+        const taskKillRes = await exec(` 
             taskkill /PID ${processId} /F
         `);
 
@@ -46,7 +49,7 @@ async function main() {
         }
       });
   } else {
-    console.error('Sorry! Not implemented :c');
+    console.error('Sorry! Unix support not implemented yet :c');
   }
 }
 

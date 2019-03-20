@@ -1,5 +1,5 @@
 // We override executive's typings because they were pitiful
-declare module "executive" {
+declare module 'executive' {
   type ExecResult = {
     status: number;
     stdout: string;
@@ -10,7 +10,7 @@ declare module "executive" {
     command: string | any[],
     options?: any,
     callback?: any
-  ): ExecResult;
+  ): Promise<ExecResult>;
 
   namespace exec {
     export function interactive(
