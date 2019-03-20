@@ -1,11 +1,11 @@
-import React from 'react'
-import { buildImageObj } from '../../lib/helpers'
-import { imageUrlFor } from '../../lib/image-url'
+import React from 'react';
+import { buildImageObj } from '../../lib/helpers';
+import { imageUrlFor } from '../../lib/image-url';
 
-import styles from './figure.module.css'
+import styles from './figure.module.css';
 
-function Figure (props) {
-  console.log(props)
+function Figure(props) {
+  console.log(props);
   return (
     <figure className={styles.root}>
       {props.asset && (
@@ -18,7 +18,7 @@ function Figure (props) {
       )}
       <figcaption className={styles.caption}>{props.caption}</figcaption>
     </figure>
-  )
+  );
 }
 
-export default Figure
+export default Figure;

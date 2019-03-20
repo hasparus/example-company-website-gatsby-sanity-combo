@@ -1,10 +1,10 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import Container from '../components/container'
-import GraphQLErrorList from '../components/graphql-error-list'
-import BlogPost from '../components/blog-post'
-import SEO from '../components/seo'
-import Layout from '../containers/layout'
+import React from 'react';
+import { graphql } from 'gatsby';
+import Container from '../components/container';
+import GraphQLErrorList from '../components/graphql-error-list';
+import BlogPost from '../components/blog-post';
+import SEO from '../components/seo';
+import Layout from '../containers/layout';
 
 export const query = graphql`
   query BlogPostTemplateQuery($id: String!) {
@@ -72,14 +72,14 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
 const BlogPostTemplate = props => {
-  const { data, errors } = props
-  const post = data && data.post
+  const { data, errors } = props;
+  const post = data && data.post;
   return (
     <Layout>
-      {errors && <SEO title='GraphQL Error' />}
+      {errors && <SEO title="GraphQL Error" />}
       {post && <SEO title={post.title || 'Untitled'} />}
 
       {errors && (
@@ -90,7 +90,7 @@ const BlogPostTemplate = props => {
 
       {post && <BlogPost {...post} />}
     </Layout>
-  )
-}
+  );
+};
 
-export default BlogPostTemplate
+export default BlogPostTemplate;

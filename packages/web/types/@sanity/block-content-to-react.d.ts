@@ -31,29 +31,106 @@ declare namespace BlockContent {
   function getImageUrl(props: any): any;
   namespace propTypes {
     function blocks(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any): any;
-    function className(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any): any;
+    function className(
+      p0: any,
+      p1: any,
+      p2: any,
+      p3: any,
+      p4: any,
+      p5: any
+    ): any;
     namespace className {
-      function isRequired(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any): any;
+      function isRequired(
+        p0: any,
+        p1: any,
+        p2: any,
+        p3: any,
+        p4: any,
+        p5: any
+      ): any;
     }
     function dataset(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any): any;
     namespace dataset {
-      function isRequired(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any): any;
+      function isRequired(
+        p0: any,
+        p1: any,
+        p2: any,
+        p3: any,
+        p4: any,
+        p5: any
+      ): any;
     }
-    function imageOptions(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any): any;
+    function imageOptions(
+      p0: any,
+      p1: any,
+      p2: any,
+      p3: any,
+      p4: any,
+      p5: any
+    ): any;
     namespace imageOptions {
-      function isRequired(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any): any;
+      function isRequired(
+        p0: any,
+        p1: any,
+        p2: any,
+        p3: any,
+        p4: any,
+        p5: any
+      ): any;
     }
-    function projectId(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any): any;
+    function projectId(
+      p0: any,
+      p1: any,
+      p2: any,
+      p3: any,
+      p4: any,
+      p5: any
+    ): any;
     namespace projectId {
-      function isRequired(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any): any;
+      function isRequired(
+        p0: any,
+        p1: any,
+        p2: any,
+        p3: any,
+        p4: any,
+        p5: any
+      ): any;
     }
-    function renderContainerOnSingleChild(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any): any;
+    function renderContainerOnSingleChild(
+      p0: any,
+      p1: any,
+      p2: any,
+      p3: any,
+      p4: any,
+      p5: any
+    ): any;
     namespace renderContainerOnSingleChild {
-      function isRequired(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any): any;
+      function isRequired(
+        p0: any,
+        p1: any,
+        p2: any,
+        p3: any,
+        p4: any,
+        p5: any
+      ): any;
     }
-    function serializers(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any): any;
+    function serializers(
+      p0: any,
+      p1: any,
+      p2: any,
+      p3: any,
+      p4: any,
+      p5: any
+    ): any;
     namespace serializers {
-      function isRequired(p0: any, p1: any, p2: any, p3: any, p4: any, p5: any): any;
+      function isRequired(
+        p0: any,
+        p1: any,
+        p2: any,
+        p3: any,
+        p4: any,
+        p5: any
+      ): any;
     }
   }
 }

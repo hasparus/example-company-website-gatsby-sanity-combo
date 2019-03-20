@@ -1,13 +1,13 @@
-import React from 'react'
-import BlockText from './block-text'
-import { buildImageObj } from '../lib/helpers'
-import { imageUrlFor } from '../lib/image-url'
+import React from 'react';
+import BlockText from './block-text';
+import { buildImageObj } from '../lib/helpers';
+import { imageUrlFor } from '../lib/image-url';
 
-import styles from './people-grid.module.css'
-import { responsiveTitle2 } from '../components/typography.module.css'
+import styles from './people-grid.module.css';
+import { responsiveTitle2 } from '../components/typography.module.css';
 
 function ProfileCard({ image, name, _rawBio }) {
-  console.log({ image })
+  console.log({ image });
   return (
     <div className={styles.profileCard}>
       <div className={styles.profileMediaThumb}>
@@ -28,7 +28,7 @@ function ProfileCard({ image, name, _rawBio }) {
         </div>
       )}
     </div>
-  )
+  );
 }
 
 function PeopleGrid({ items, title }) {
@@ -43,7 +43,7 @@ function PeopleGrid({ items, title }) {
         ))}
       </ul>
     </div>
-  )
+  );
 }
 
-export default PeopleGrid
+export default PeopleGrid;

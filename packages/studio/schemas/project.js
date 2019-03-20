@@ -12,7 +12,8 @@ export default {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
-      description: 'Some frontend will require a slug to be set to be able to show the project',
+      description:
+        'Some frontend will require a slug to be set to be able to show the project',
       options: {
         source: 'title',
         maxLength: 96
@@ -21,7 +22,8 @@ export default {
     {
       name: 'publishedAt',
       title: 'Published at',
-      description: 'You can use this field to schedule projects where you show them',
+      description:
+        'You can use this field to schedule projects where you show them',
       type: 'datetime'
     },
     {

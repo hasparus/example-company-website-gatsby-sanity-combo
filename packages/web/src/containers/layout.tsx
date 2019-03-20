@@ -21,7 +21,7 @@ const query = graphql`
 
 type LayoutContainerProps = {};
 
-function LayoutContainer(props: LayoutContainerProps) {
+const LayoutContainer: React.FC<LayoutContainerProps> = props => {
   const [showNav, setShowNav] = useState(false);
   function handleShowNav() {
     setShowNav(true);
@@ -56,6 +56,6 @@ function LayoutContainer(props: LayoutContainerProps) {
       }}
     />
   );
-}
+};
 
 export default LayoutContainer;

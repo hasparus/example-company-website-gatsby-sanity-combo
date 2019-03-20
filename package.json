@@ -8,15 +8,15 @@
     "deploy": "lerna run deploy",
     "empty-cache": "rimraf web/.cache",
     "init": "cd studio && sanity init && lerna run graphql-deploy",
-    "format": "lerna run format",
     "graphql-deploy": "lerna run graphql-deploy",
     "now-deploy": "now && now alias",
     "postinstall": "lerna bootstrap",
     "sanity-deploy": "lerna run sanity-deploy",
     "start": "lerna run empty-cache && lerna run start --parallel",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tslint": "tslint --project web/tsconfig.json",
-    "lint": "yarn run tslint && lerna run lint"
+    "tslint": "tslint --project packages/web/tsconfig.json",
+    "lint": "yarn run tslint && lerna run lint",
+    "format": "prettier --write ./**/*.{js,jsx,ts,tsx,json} && lerna run format"
   },
   "devDependencies": {
     "@hasparus/tslint-config": "https://github.com/hasparus/tslint-config-hasparus",

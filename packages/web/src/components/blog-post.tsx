@@ -9,7 +9,9 @@ import styles from './blog-post.module.css';
 import Container from './container';
 import RoleList from './role-list';
 
-function BlogPost(props) {
+type BlogPostProps = {};
+
+const BlogPost: React.FC<BlogPostProps> = props => {
   const {
     _rawBody,
     authors,
@@ -49,7 +51,7 @@ function BlogPost(props) {
             {authors && <RoleList items={authors} title="Authors" />}
             {categories && (
               <div className={styles.categories}>
-                <h3 className={styles.categoriesHeadline}>Categories</h3>
+                <h2 className={styles.categoriesHeadline}>Categories</h2>
                 <ul>
                   {categories.map(category => (
                     <li key={category._id}>{category.title}</li>
@@ -62,6 +64,6 @@ function BlogPost(props) {
       </Container>
     </article>
   );
-}
+};
 
 export default BlogPost;
